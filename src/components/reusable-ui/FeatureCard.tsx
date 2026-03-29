@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from 'next/image';
 
 
@@ -5,7 +6,7 @@ function FeaturesCard(item: any) {
 
   return (
     <div
-      style={{ border: '.5px solid #cdcdcd4a' }}
+      style={{ border: '.5px solid #cdcdcd' }}
       className="relative h-full aspect-video p-3 flex md:border-none rounded-3xl items-start justify-between flex-col"
     >
       <div
