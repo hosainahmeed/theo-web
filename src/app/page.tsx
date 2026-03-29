@@ -5,7 +5,7 @@ import { Mobile } from '@hugeicons/core-free-icons'
 import { HugeiconsIcon } from '@hugeicons/react'
 import Image from 'next/image'
 import { useState } from 'react'
-import BrandShowcase from './sections/BrandShowcase'
+import BrandShowcase from './[locale]/sections/BrandShowcase'
 
 const App = () => {
   const [showAppQRcode, setShowAppQRcode] = useState(false)

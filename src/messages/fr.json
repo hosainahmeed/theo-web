@@ -14,5 +14,15 @@
     "description": "Découvrez la puissance du ménage avec AIRMANAGE. Rationalisez, gérez et surveillez les opérations de ménage en toute simplicité.",
     "getStarted": "Commencer",
     "exploreTemplate": "Explorer le modèle"
+  },
+  "hostFeatures": {
+    "createAccount": "Créer un compte hôte",
+    "createAccountDesc": "Créez votre profil pour gérer vos propriétés et vos équipes en un seul endroit.",
+    "addProperty": "Ajouter votre propriété",
+    "addPropertyDesc": "Ajoutez votre appartement avec les informations nécessaires pour la gestion et le nettoyage.",
+    "manageListings": "Gérer les annonces",
+    "manageListingsDesc": "Planifiez et gérez facilement les nettoyages de vos propriétés.",
+    "assignCleaners": "Assigner des femmes de ménage",
+    "assignCleanersDesc": "Associez des femmes de ménage à vos propriétés pour automatiser les tâches de nettoyage."
   }
 }

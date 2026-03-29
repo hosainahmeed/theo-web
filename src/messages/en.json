@@ -14,5 +14,15 @@
     "description": "Discover the power of housekeeping with AIRMANAGE. Streamline, manage, and monitor housekeeping operations with ease.",
     "getStarted": "Get started",
     "exploreTemplate": "Explore template"
+  },
+  "hostFeatures": {
+    "createAccount": "Create a host account",
+    "createAccountDesc": "Create your profile to manage your properties and teams in one place.",
+    "addProperty": "Add your property",
+    "addPropertyDesc": "Add your apartment with necessary information for management and cleaning.",
+    "manageListings": "Manage listings",
+    "manageListingsDesc": "Easily plan and manage cleaning of your properties.",
+    "assignCleaners": "Assign cleaners",
+    "assignCleanersDesc": "Associate cleaners with your properties to automate cleaning tasks."
   }
 }
