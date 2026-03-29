@@ -1,9 +1,10 @@
+import LanguageLoadingOverlayClient from "@/components/ui/language-loading-overlay-client";
+import { LanguageProvider } from "@/contexts/language-context";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Figtree, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ReduxLayout from "./ReduxLayout";
-import Header from './sections/Header';
 
 const figtree = Figtree({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -28,14 +29,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", figtree.variable)}>
+    <html className={cn("font-sans", figtree.variable)}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ReduxLayout>
-          <Header />
-          {children}
-        </ReduxLayout>
+        <LanguageProvider>
+          <ReduxLayout>
+            {children}
+          </ReduxLayout>
+          <LanguageLoadingOverlayClient />
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -1,0 +1,18 @@
+{
+  "header": {
+    "home": "Accueil",
+    "forHosts": "Pour les hôtes",
+    "forCleaners": "Pour les nettoyeurs",
+    "aboutUs": "À propos de nous",
+    "contactUs": "Contactez-nous",
+    "becomeHouseKeeper": "Devenir un hôte"
+  },
+  "home": {
+    "getApp": "Obtenez l'application",
+    "title": "Les gardiens de maison développent votre entreprise avec",
+    "titleHighlight": "AIRMANAGE",
+    "description": "Découvrez la puissance du ménage avec AIRMANAGE. Rationalisez, gérez et surveillez les opérations de ménage en toute simplicité.",
+    "getStarted": "Commencer",
+    "exploreTemplate": "Explorer le modèle"
+  }
+}

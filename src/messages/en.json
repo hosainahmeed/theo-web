@@ -1,0 +1,18 @@
+{
+  "header": {
+    "home": "Home",
+    "forHosts": "For Hosts",
+    "forCleaners": "For Cleaners",
+    "aboutUs": "About us",
+    "contactUs": "Contact us",
+    "becomeHouseKeeper": "Become a Host"
+  },
+  "home": {
+    "getApp": "Get the app",
+    "title": "House keepers Grow your business with",
+    "titleHighlight": "AIRMANAGE",
+    "description": "Discover the power of housekeeping with AIRMANAGE. Streamline, manage, and monitor housekeeping operations with ease.",
+    "getStarted": "Get started",
+    "exploreTemplate": "Explore template"
+  }
+}
