@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Figtree, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ReduxLayout from "./ReduxLayout";
+import Header from './sections/Header';
 
 const figtree = Figtree({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ReduxLayout>
+          <Header />
           {children}
         </ReduxLayout>
       </body>

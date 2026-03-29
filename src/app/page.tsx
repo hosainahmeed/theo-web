@@ -1,61 +1,87 @@
-import Image from "next/image";
-import Link from 'next/link';
+"use client"
+import AnimatedButton from '@/components/ui/animated-button'
+import { IMAGE } from '@/constant/image.index'
+import { Mobile } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
+import Image from 'next/image'
+import { useState } from 'react'
+import BrandShowcase from './sections/BrandShowcase'
 
-export default function Home() {
+const App = () => {
+  const [showAppQRcode, setShowAppQRcode] = useState(false)
+
+  const handleGetStarted = () => {
+    console.log('Get started clicked!');
+    // Add your navigation or action here
+  }
+
+  const handleExploreTemplate = () => {
+    console.log('Explore template clicked!');
+    // Add your navigation or action here
+  }
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <section className="relative flex flex-col items-center max-md:px-2 bg-linear-to-b from-[#0088FF] to-white pb-20 pt-5">
+        <div
+          onMouseEnter={() => {
+            setShowAppQRcode(true)
+          }}
+          onMouseLeave={() => {
+            setShowAppQRcode(false)
+          }}
+          className="flex relative  flex-wrap items-center justify-center gap-2 pr-4 mt-8 rounded-full bg-white/10 border border-white/20">
+          <button className='bg-[#3c44e2] animate-pulse w-8 h-8 flex items-center justify-center border border-white/20 text-white rounded-full text-xs'><HugeiconsIcon size={16} icon={Mobile} /> </button>
+
+          <p className="text-xs text-gray-50">Get the app</p>
+          {showAppQRcode && <div className="absolute top-[calc(100%+8px)] left-0 w-32 h-32 bg-white rounded-lg border border-white/20">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" alt="QR Code" className="w-full object-contain h-full" />
+          </div>}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <Link href="/property/create-property" className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]">
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+        <h1 className="text-4xl md:text-7xl/20 text-center font-semibold max-w-5xl mt-5 bg-linear-to-r from-[#0B1320] to-indigo-500 text-transparent leading-tight bg-clip-text">
+          House keepers Grow your business with <span className="text-indigo-500">AIRMANAGE</span>
+        </h1>
+        <p className="text-gray-600 text-sm md:text-base/6 text-center max-w-3xl mt-3">
+          Discover the power of housekeeping with AIRMANAGE. Streamline, manage, and monitor housekeeping operations with ease.
+        </p>
+
+        <div className="flex items-center gap-4 mt-8 text-sm">
+          <AnimatedButton
+            buttonText="Get started"
+            onClick={handleGetStarted}
+            className="text-sm"
+          />
+
+          <div className='p-[0.5px] rounded-full bg-linear-to-r from-white to-white/60'>
+            <AnimatedButton
+              buttonText="Explore template"
+              onClick={handleExploreTemplate}
+              variant="secondary"
+              className="text-sm"
             />
-            Deploy Now
-          </Link>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
-  );
+
+        <div className="flex flex-row items-center justify-center gap-10 md:gap-20 mx-auto my-4 px-4 flex-wrap">
+          <BrandShowcase />
+        </div>
+        <div className="relative h-150 md:h-146.5 overflow-hidden border-b-transparent border-b-0 rounded-bl-none rounded-br-none rounded-3xl">
+          <div className="absolute bottom-0 w-full h-2/4 md:h-1/4 bg-linear-to-t to-transparent via-white/70 from-white left-0"></div>
+          <Image
+            placeholder="blur"
+            className="h-full rounded-3xl object-contain md:object-cover object-top"
+            src={IMAGE.hostPreview}
+            loading="lazy"
+            // blurDataURL={heroImage}
+            width={1000}
+            height={586}
+            alt="Host Preview"
+          />
+        </div>
+      </section>
+    </>
+  )
 }
+
+export default App
