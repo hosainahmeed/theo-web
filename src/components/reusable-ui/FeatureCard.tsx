@@ -25,7 +25,7 @@ function FeaturesCard(item: any) {
         />
       )}
       <div className="px-4 py-2">
-        <h1 className="text-black text-2xl md:text-3xl font-semibold">
+        <h1 className="text-black text-xl font-semibold">
           {item?.title}
         </h1>
         <h1 className="text-sm text-black/80">

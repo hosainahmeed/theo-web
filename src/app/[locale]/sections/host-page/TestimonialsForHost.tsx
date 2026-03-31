@@ -5,6 +5,7 @@ import "@/styles/testimonial.css"
 import { Quote, Star } from 'lucide-react'
 import Image from 'next/image'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface Testimonial {
   id: number
@@ -19,10 +20,11 @@ interface MarqueeColumnProps {
   testimonials: Testimonial[]
   direction: 'up' | 'down'
   speed?: number
+  fanText: string
 }
 
 // ─── Single Card ──────────────────────────────────────────────────────────────
-const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => (
+const TestimonialCard: React.FC<{ testimonial: Testimonial; fanText: string }> = ({ testimonial, fanText }) => (
   <div className="testimonial-card bg-[#0088FF]/10!">
     <div className="card-glow" />
 
@@ -60,7 +62,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({ testimonial }
       </div>
       <div>
         <p className="profile-name">{testimonial.name}</p>
-        <p className="profile-type">{testimonial.fan_type} Fan</p>
+        <p className="profile-type">{testimonial.fan_type} {fanText}</p>
       </div>
     </div>
   </div>
@@ -71,6 +73,7 @@ const MarqueeColumn: React.FC<MarqueeColumnProps> = ({
   testimonials,
   direction,
   speed = 40,
+  fanText
 }) => {
   const trackRef = useRef<HTMLDivElement>(null)
   const posRef = useRef(0)
@@ -122,8 +125,8 @@ const MarqueeColumn: React.FC<MarqueeColumnProps> = ({
       className="marquee-column"
     >
       <div ref={trackRef} className="marquee-track">
-        {doubled.map((t, i) => (
-          <TestimonialCard key={`${t.id}-${i}`} testimonial={t} />
+        {doubled.map((testimonial, i) => (
+          <TestimonialCard key={`${testimonial.id}-${i}`} testimonial={testimonial} fanText={fanText} />
         ))}
       </div>
     </div>
@@ -132,6 +135,7 @@ const MarqueeColumn: React.FC<MarqueeColumnProps> = ({
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 const TestimonialsForHost: React.FC = () => {
+  const t = useTranslations('testimonialsForHost');
   const [columns, setColumns] = useState(3)
 
   useEffect(() => {
@@ -147,19 +151,103 @@ const TestimonialsForHost: React.FC = () => {
   }, [])
 
   const testimonialData: Testimonial[] = [
-    { id: 1, profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", name: "Alex Thompson", rating: 5, fan_type: "Soccer", description: "This platform completely transformed how I follow my favorite teams. The real-time updates and community features are absolutely incredible. I've connected with so many fellow fans!" },
-    { id: 2, profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", name: "Sarah Johnson", rating: 5, fan_type: "Cricket", description: "As a cricket enthusiast, I've never found a better platform. The insights, statistics, and match analysis are top-notch. Highly recommend to all sports fans!" },
-    { id: 3, profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", name: "Michael Chen", rating: 4, fan_type: "Basketball", description: "The basketball coverage is phenomenal. Love the player stats and game predictions. The mobile app makes it easy to stay updated on the go." },
-    { id: 4, profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", name: "Emma Wilson", rating: 5, fan_type: "Tennis", description: "Finally, a platform that gives tennis the attention it deserves! Grand slam coverage is amazing, and the analysis really helps understand the game better." },
-    { id: 5, profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", name: "David Martinez", rating: 4, fan_type: "Football", description: "The football community here is incredible. Great discussions, live match threads, and fantasy league integration. Makes every game day more exciting!" },
-    { id: 6, profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", name: "Lisa Anderson", rating: 5, fan_type: "Volleyball", description: "Volleyball coverage has never been better! The player profiles and match highlights are fantastic. Love the beach volleyball section especially." },
-    { id: 7, profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", name: "James Taylor", rating: 4, fan_type: "Swimming", description: "As a competitive swimmer, I appreciate the detailed coverage of swimming events. The technique analysis and race predictions are spot on." },
-    { id: 8, profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", name: "Robert Brown", rating: 5, fan_type: "Baseball", description: "Baseball statistics and analysis are second to none. The historical data and player comparisons help me understand the game on a deeper level." },
-    { id: 9, profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", name: "Maria Garcia", rating: 4, fan_type: "Rugby", description: "Rugby coverage is comprehensive and passionate. The international tournament analysis and player interviews are absolutely brilliant!" },
-    { id: 10, profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", name: "Thomas Lee", rating: 5, fan_type: "Golf", description: "The golf section is exceptional. Course guides, player statistics, and tournament coverage make this a golfer's paradise. Absolutely love it!" },
-    { id: 11, profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", name: "Jennifer White", rating: 4, fan_type: "Hockey", description: "Hockey coverage is intense and detailed. Love the real-time game updates and post-match analysis. The community discussions are amazing!" },
-    { id: 12, profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", name: "Christopher Moore", rating: 5, fan_type: "Boxing", description: "Boxing analysis and fight predictions are incredibly accurate. The fighter profiles and match breakdowns help me understand the sport better." },
-  ]
+    {
+      id: 1,
+      profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "Marie Dubois",
+      rating: 5,
+      fan_type: "Nettoyage",
+      description: "Gestlio a transformé ma façon de travailler. Je peux maintenant gérer plusieurs propriétés en même temps et les propriétaires sont très satisfaits de mon travail."
+    },
+    {
+      id: 2,
+      profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "Pierre Martin",
+      rating: 5,
+      fan_type: "Ménage",
+      description: "La plateforme m'a permis de trouver des clients réguliers. Je suis maintenant autonome et mes revenus ont considérablement augmenté."
+    },
+    {
+      id: 3,
+      profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "Sophie Bernard",
+      rating: 5,
+      fan_type: "Entretien",
+      description: "Les instructions détaillées pour chaque propriété sont très claires. Je sais exactement ce que les clients attendent et je reçois toujours d'excellentes évaluations."
+    },
+    {
+      id: 4,
+      profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "Jean Petit",
+      rating: 5,
+      fan_type: "Service",
+      description: "Le système de paiement est fiable et rapide. Je reçois mon argent dans les 24 heures après chaque nettoyage, ce qui est parfait pour gérer mes finances."
+    },
+    {
+      id: 5,
+      profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "Isabelle Laurent",
+      rating: 5,
+      fan_type: "Propreté",
+      description: "J'apprécie la flexibilité des horaires. Je peux choisir les missions qui me conviennent et organiser mon emploi du temps comme je le souhaite."
+    },
+    {
+      id: 6,
+      profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "Thomas Rousseau",
+      rating: 5,
+      fan_type: "Qualité",
+      description: "Les outils et produits fournis par Gestlio sont excellents. Je peux fournir un service de haute qualité grâce à leur support."
+    },
+    {
+      id: 7,
+      profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "Camille Moreau",
+      rating: 5,
+      fan_type: "Communication",
+      description: "La communication avec les propriétaires est simple et efficace. Je peux facilement coordonner les disponibilités et signaler tout problème."
+    },
+    {
+      id: 8,
+      profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "Lucas Girard",
+      rating: 5,
+      fan_type: "Confiance",
+      description: "Les propriétaires me font confiance et me recommandent à d'autres. Je construis ma réputation grâce à la fiabilité de la plateforme."
+    },
+    {
+      id: 9,
+      profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "Emma Lemoine",
+      rating: 5,
+      fan_type: "Efficacité",
+      description: "Le temps de nettoyage est optimisé grâce aux bonnes pratiques enseignées par Gestlio. Je peux gérer plus de propriétés en moins de temps."
+    },
+    {
+      id: 10,
+      profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "Nicolas Blanc",
+      rating: 5,
+      fan_type: "Professionnalisme",
+      description: "Gestlio m'a permis de développer mes compétences professionnelles. Je suis maintenant un nettoyeur reconnu pour la qualité et la fiabilité de mon travail."
+    },
+    {
+      id: 11,
+      profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "Julie Robert",
+      rating: 5,
+      fan_type: "Opportunités",
+      description: "J'accède à des opportunités que je n'aurais jamais trouvées ailleurs. La plateforme m'ouvre à de nouveaux marchés et types de propriétés."
+    },
+    {
+      id: 12,
+      profile_image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      name: "Antoine Dupont",
+      rating: 5,
+      fan_type: "Sécurité",
+      description: "Je me sens en sécurité avec Gestlio. Le système protège mes informations et garantit les paiements. C'est essentiel pour travailler en toute tranquillité."
+    }
+  ];
 
   // Distribute cards round-robin into columns
   const colData: Testimonial[][] = Array.from({ length: columns }, (_, ci) =>
@@ -171,8 +259,6 @@ const TestimonialsForHost: React.FC = () => {
 
   return (
     <>
-
-
       <section className="testimonials-root w-full! px-2">
         {/* Header */}
         <div className="text-center mb-12">
@@ -188,18 +274,18 @@ const TestimonialsForHost: React.FC = () => {
               aria-hidden="true"
             />
             <span className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[#0088FF]">
-              Trusted by Cleaners
+              {t('trustedByCleaners')}
             </span>
           </div>
           <h1 className="text-2xl font-e sm:text-4xl md:text-5xl font-bold text-[#154098] mb-4">
-            Cleaners already making{" "}
+            {t('title')}{" "}
             <span className="text-[#0088FF]">
-              an impact</span>
+              {t('titleHighlight')}
+            </span>
           </h1>
 
           <p className="text-black/40 max-w-2xl text-sm md:text-base mx-auto">
-            Hear from the early community of fans and female athletes who are already
-            experiencing the power of PROTIPPZ — and what it means to be part of this movement.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -213,6 +299,7 @@ const TestimonialsForHost: React.FC = () => {
                 testimonials={col}
                 direction={directionFor(ci)}
                 speed={columns === 1 ? 32 : 36 + ci * 4}
+                fanText={t('fan')}
               />
             ))}
           </div>

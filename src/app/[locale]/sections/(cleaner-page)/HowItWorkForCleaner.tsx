@@ -1,34 +1,37 @@
 import SectionHeader from '@/components/reusable-ui/SectionHeader'
 import { IMAGE } from '@/constant/image.index'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 function HowItWorkForCleaner() {
+  const t = useTranslations('howItWorkForCleaner');
+
   const data = [
     {
-      title: "Create Account",
-      description: "Get started in minutes , Sign up and set up your cleaner profile quickly.",
+      title: t('steps.createAccount.title'),
+      description: t('steps.createAccount.description'),
       image: IMAGE.login_step,
     },
     {
-      title: "Connect with Hosts",
-      description: "Get matched with property owners , Connect with hosts who need cleaning services.",
+      title: t('steps.connectWithHosts.title'),
+      description: t('steps.connectWithHosts.description'),
       image: IMAGE.connection,
     },
     {
-      title: "Receive Tasks",
-      description: "Start getting cleaning jobs , Get notified when new tasks are assigned to you.",
+      title: t('steps.receiveTasks.title'),
+      description: t('steps.receiveTasks.description'),
       image: IMAGE.receivingTask,
     },
     {
-      title: "Complete & Get Paid",
-      description: "Finish jobs and track earnings , Complete tasks, upload proof, and receive payments easily.",
+      title: t('steps.completeAndGetPaid.title'),
+      description: t('steps.completeAndGetPaid.description'),
       image: IMAGE.payment,
     },
   ]
   return (
-    <div className='container mx-auto h-fit py-12 md:py-28 flex flex-col justify-center'>
+    <div className='container mx-auto h-fit flex flex-col justify-center'>
       <div>
-        <SectionHeader title="Start Cleaning in 4 Simple Steps" subTitle="Join Gestlio and start receiving cleaning jobs in minutes." highlightText='4' />
+        <SectionHeader title={t('title')} subTitle={t('subtitle')} highlightText='4' />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
           {data.map((item, index) => (
             <div className='w-full flex flex-col items-start' key={index}>

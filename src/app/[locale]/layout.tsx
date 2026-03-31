@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Header from './sections/Header';
+import Footer from './sections/Footer';
 
 export default async function LocaleLayout({
   children,
@@ -13,6 +14,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
@@ -23,6 +25,7 @@ export default async function LocaleLayout({
     <NextIntlClientProvider messages={messages}>
       <Header />
       {children}
+      <Footer />
     </NextIntlClientProvider>
   );
 }

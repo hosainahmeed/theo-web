@@ -1,15 +1,15 @@
+import TestimonialsForCleaner from '../sections/(cleaner-page)/TestimonialsForCleaner'
 import DownloadAppSection from '../sections/host-page/DownloadAppSection'
 import HostHero from '../sections/host-page/HostHero'
 import HowItWorkForHost from '../sections/host-page/HowItWorkForHost'
-import TestimonialsForHost from '../sections/host-page/TestimonialsForHost'
 
 function page() {
   return (
-    <div>
+    <div className='space-y-16'>
       <HostHero />
       <HowItWorkForHost />
       <DownloadAppSection />
-      <TestimonialsForHost />
+      <TestimonialsForCleaner />
     </div>
   )
 }

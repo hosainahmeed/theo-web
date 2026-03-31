@@ -16,6 +16,8 @@
     "exploreTemplate": "Explore template"
   },
   "hostFeatures": {
+    "title": "How It Works",
+    "subtitle": "Add your property, assign cleaners, and manage bookings from one place.",
     "createAccount": "Create a host account",
     "createAccountDesc": "Create your profile to manage your properties and teams in one place.",
     "addProperty": "Add your property",
@@ -24,5 +26,132 @@
     "manageListingsDesc": "Easily plan and manage cleaning of your properties.",
     "assignCleaners": "Assign cleaners",
     "assignCleanersDesc": "Associate cleaners with your properties to automate cleaning tasks."
+  },
+  "cleanerHero": {
+    "title": "Find High-Paying Property Cleaning Jobs",
+    "description": "Connect directly with property owners and Airbnb hosts in your area. Browse available turnovers, set your own rates, and build a reliable cleaning business on your own schedule.",
+    "joinAsCleaner": "Join as Cleaner",
+    "howItWorks": "How it Works"
+  },
+  "cleanerBenefits": {
+    "title": "Why Cleaners Love Gestlio",
+    "subtitle": "Join thousands of cleaners who've transformed their business with our platform. Discover the tools that make cleaning work simple and profitable.",
+    "clearSchedule": {
+      "title": "Clear daily schedule",
+      "description": "View all your cleaning jobs organized by date and time. Never miss an appointment with our intuitive calendar system."
+    },
+    "noConfusion": {
+      "title": "No confusion",
+      "description": "Get detailed job instructions, property information, and client requirements all in one place. Everything you need to know."
+    },
+    "moreJobs": {
+      "title": "More jobs",
+      "description": "Connect with property owners and Airbnb hosts looking for reliable cleaners. Expand your client base and increase earnings."
+    },
+    "easyCommunication": {
+      "title": "Easy communication",
+      "description": "Message clients directly through the app. Ask questions, send updates, and build professional relationships."
+    },
+    "startEarning": "Start Earning Today"
+  },
+  "howItWorkForCleaner": {
+    "title": "Start Cleaning in 4 Simple Steps",
+    "subtitle": "Join Gestlio and start receiving cleaning jobs in minutes.",
+    "steps": {
+      "createAccount": {
+        "title": "Create Account",
+        "description": "Get started in minutes, Sign up and set up your cleaner profile quickly."
+      },
+      "connectWithHosts": {
+        "title": "Connect with Hosts",
+        "description": "Get matched with property owners, Connect with hosts who need cleaning services."
+      },
+      "receiveTasks": {
+        "title": "Receive Tasks",
+        "description": "Start getting cleaning jobs, Get notified when new tasks are assigned to you."
+      },
+      "completeAndGetPaid": {
+        "title": "Complete & Get Paid",
+        "description": "Finish jobs and track earnings, Complete tasks, upload proof, and receive payments easily."
+      }
+    }
+  },
+  "downloadApp": {
+    "usedByUsers": "Used by 12k+ users",
+    "title": "Interested to use App?",
+    "description": "Download our app and start using it today!"
+  },
+  "testimonialsForCleaner": {
+    "testimonials": "Testimonials",
+    "title": "Trusted by hosts from all over the world",
+    "subtitle": "Join thousands of hosts who trust Theo to find their perfect cleaner",
+    "joinAsHost": "Join as host"
+  },
+  "testimonialsForHost": {
+    "trustedByCleaners": "Trusted by Cleaners",
+    "title": "Cleaners already making",
+    "titleHighlight": "an impact",
+    "subtitle": "Join thousands of cleaners who trust Gestlio to find their perfect job",
+    "fan": "Fan",
+    "testimonial1": {
+      "name": "Alex Thompson",
+      "fanType": "Soccer",
+      "description": "This platform completely transformed how I follow my favorite teams. The real-time updates and community features are absolutely incredible. I've connected with so many fellow fans!"
+    },
+    "testimonial2": {
+      "name": "Sarah Johnson",
+      "fanType": "Cricket",
+      "description": "As a cricket enthusiast, I've never found a better platform. The insights, statistics, and match analysis are top-notch. Highly recommend to all sports fans!"
+    },
+    "testimonial3": {
+      "name": "Michael Chen",
+      "fanType": "Basketball",
+      "description": "The basketball coverage is phenomenal. Love player stats and game predictions. The mobile app makes it easy to stay updated on the go."
+    },
+    "testimonial4": {
+      "name": "Emma Wilson",
+      "fanType": "Tennis",
+      "description": "Finally, a platform that gives tennis the attention it deserves! Grand slam coverage is amazing, and the analysis really helps understand the game better."
+    },
+    "testimonial5": {
+      "name": "David Martinez",
+      "fanType": "Football",
+      "description": "The football community here is incredible. Great discussions, live match threads, and fantasy league integration. Makes every game day more exciting!"
+    },
+    "testimonial6": {
+      "name": "Lisa Anderson",
+      "fanType": "Volleyball",
+      "description": "Volleyball coverage has never been better! The player profiles and match highlights are fantastic. Love the beach volleyball section especially."
+    },
+    "testimonial7": {
+      "name": "James Taylor",
+      "fanType": "Swimming",
+      "description": "As a competitive swimmer, I appreciate the detailed coverage of swimming events. The technique analysis and race predictions are spot on."
+    },
+    "testimonial8": {
+      "name": "Robert Brown",
+      "fanType": "Baseball",
+      "description": "Baseball statistics and analysis are second to none. The historical data and player comparisons help me understand the game on a deeper level."
+    },
+    "testimonial9": {
+      "name": "Maria Garcia",
+      "fanType": "Rugby",
+      "description": "Rugby coverage is comprehensive and passionate. The international tournament analysis and player interviews are absolutely brilliant!"
+    },
+    "testimonial10": {
+      "name": "Thomas Lee",
+      "fanType": "Golf",
+      "description": "The golf section is exceptional. Course guides, player statistics, and tournament coverage make this a golfer's paradise. Absolutely love it!"
+    },
+    "testimonial11": {
+      "name": "Jennifer White",
+      "fanType": "Hockey",
+      "description": "Hockey coverage is intense and detailed. Love real-time game updates and post-match analysis. The community discussions are amazing!"
+    },
+    "testimonial12": {
+      "name": "Christopher Moore",
+      "fanType": "Boxing",
+      "description": "Boxing analysis and fight predictions are incredibly accurate. The fighter profiles and match breakdowns help me understand the sport better."
+    }
   }
 }

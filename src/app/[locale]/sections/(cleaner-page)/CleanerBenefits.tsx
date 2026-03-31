@@ -1,44 +1,52 @@
 import SectionHeader from '@/components/reusable-ui/SectionHeader'
 import AnimatedButton from '@/components/ui/animated-button'
+import { cn } from '@/lib/utils'
+import { useTranslations } from 'next-intl'
+
+interface CardProps {
+  t: (key: string) => string
+}
+
+const cardStyle = "p-8 border border-border rounded-2xl h-full"
+
+const Card1 = ({ t }: CardProps) => (
+  <div className={cardStyle}>
+    <h1 className="text-lg text-zinc-900 font-semibold mb-2">{t('clearSchedule.title')}</h1>
+    <p className="text-sm text-zinc-600 leading-relaxed">{t('clearSchedule.description')}</p>
+  </div>
+)
+const Card2 = ({ t }: CardProps) => (
+  <div className={cn(cardStyle)}>
+    <h1 className="text-lg text-zinc-900 font-semibold mb-2">{t('noConfusion.title')}</h1>
+    <p className="text-sm text-zinc-600 leading-relaxed">{t('noConfusion.description')}</p>
+  </div>
+)
+const Card3 = ({ t }: CardProps) => (
+  <div className={cn(cardStyle)}>
+    <h1 className="text-lg text-zinc-900 font-semibold mb-2">{t('moreJobs.title')}</h1>
+    <p className="text-sm text-zinc-600 leading-relaxed">{t('moreJobs.description')}</p>
+  </div>
+)
+const Card4 = ({ t }: CardProps) => (
+  <div className={cn(cardStyle)}>
+    <h1 className="text-lg text-zinc-900 font-semibold mb-2">{t('easyCommunication.title')}</h1>
+    <p className="text-sm text-zinc-600 leading-relaxed">{t('easyCommunication.description')}</p>
+  </div>
+)
+
 
 function CleanerBenefits() {
-  const benefits = [
-    {
-      title: "Clear daily schedule",
-      description: "View all your cleaning jobs organized by date and time. Never miss an appointment with our intuitive calendar system.",
-      icon: "📅"
-    },
-    {
-      title: "No confusion",
-      description: "Get detailed job instructions, property information, and client requirements all in one place. Everything you need to know.",
-      icon: "✓"
-    },
-    {
-      title: "More jobs",
-      description: "Connect with property owners and Airbnb hosts looking for reliable cleaners. Expand your client base and increase earnings.",
-      icon: "📈"
-    },
-    {
-      title: "Easy communication",
-      description: "Message clients directly through the app. Ask questions, send updates, and build professional relationships.",
-      icon: "💬"
-    },
-    {
-      title: "Track earnings",
-      description: "Monitor your income in real-time. See completed jobs, pending payments, and total earnings with detailed reports.",
-      icon: "💰"
-    }
-  ]
+  const t = useTranslations('cleanerBenefits');
 
   return (
-    <div className='container mx-auto h-fit flex flex-col justify-center'>
+    <div className='max-w-7xl px-2 mx-auto h-fit flex flex-col justify-center'>
       <div>
         <SectionHeader
-          title="Why Cleaners Love Gestlio"
-          subTitle="Join thousands of cleaners who've transformed their business with our platform. Discover the tools that make cleaning work simple and profitable."
+          title={t('title')}
+          subTitle={t('subtitle')}
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {benefits.map((benefit, index) => (
             <div
               className='w-full flex flex-col items-start bg-white p-6 rounded-xl border border-gray-100 transition-all duration-300'
@@ -51,10 +59,31 @@ function CleanerBenefits() {
               <p className='text-sm text-zinc-600 leading-relaxed'>{benefit.description}</p>
             </div>
           ))}
-        </div>
+        </div> */}
+        <div
+          className="grid gap-3
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-3"
+        >
+          <div className="col-span-3 sm:col-span-1">
+            <Card1 t={t} />
+          </div>
 
-        <div className="mt-12 text-center">
-          <AnimatedButton buttonText="Start Earning Today" />
+          <div className="col-span-3 sm:col-span-2 lg:col-span-2">
+            <Card2 t={t} />
+          </div>
+
+          <div className="col-span-3 sm:col-span-2 lg:col-span-2">
+            <Card3 t={t} />
+          </div>
+
+          <div className="col-span-3 sm:col-span-3 lg:col-span-1">
+            <Card4 t={t} />
+          </div>
+        </div>
+        <div className="mt-12 text-center flex justify-center">
+          <AnimatedButton buttonText={t('startEarning')} />
         </div>
       </div>
     </div>

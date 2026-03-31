@@ -14,6 +14,7 @@ import houseImage from '@/assets/house.svg';
 import login_step from '@/assets/login-step.png';
 import paymentGif from '@/assets/payment.gif';
 import receivingTaskImage from '@/assets/reciveing-task.png';
+import testimonialsImage from '@/assets/images-for-tesimonials.png';
 
 export const IMAGE = {
   apartment: apartmentImage,
@@ -31,5 +32,6 @@ export const IMAGE = {
   connection: connectionImage,
   receivingTask: receivingTaskImage,
   login_step,
-  payment: paymentGif
+  payment: paymentGif,
+  testimonials: testimonialsImage
 } as const;

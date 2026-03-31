@@ -1,8 +1,12 @@
 import AnimatedButton from '@/components/ui/animated-button';
 import { IMAGE } from '@/constant/image.index';
 import Image from "next/image";
+import BrandShowcase from '../BrandShowcase';
+import { useTranslations } from 'next-intl';
 
 function CleanerHero() {
+  const t = useTranslations('cleanerHero');
+
   return (
     <div
       className="w-full bg-linear-to-b from-[#0088FF] to-transparent">
@@ -10,14 +14,15 @@ function CleanerHero() {
         {/* Text Content */}
         <div className="flex-1 flex flex-col items-center md:items-start gap-6 text-left">
           <h1 className="text-3xl sm:text-4xl text-center md:text-start md:text-5xl font-semibold leading-tight">
-            Find High-Paying Property Cleaning Jobs
+            {t('title')}
           </h1>
           <p className="text-base text-center md:text-start sm:text-lg text-gray-600">
-            Connect directly with property owners and Airbnb hosts in your area. Browse available turnovers, set your own rates, and build a reliable cleaning business on your own schedule.
+            {t('description')}
           </p>
-          <div className="flex gap-2">
-            <AnimatedButton variant='secondary' buttonText="Join as Cleaner" />
-            <AnimatedButton buttonText="How it Works" />
+          <div className="flex flex-col sm:flex-row gap-2 space-y-2 sm:space-y-0">
+            <AnimatedButton variant='secondary' buttonText={t('joinAsCleaner')} />
+            <div className="w-2 hidden sm:block"></div>
+            <AnimatedButton buttonText={t('howItWorks')} />
           </div>
         </div>
 
@@ -33,6 +38,7 @@ function CleanerHero() {
           />
         </div>
       </div>
+      <BrandShowcase />
     </div>
   )
 }

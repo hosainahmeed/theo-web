@@ -30,10 +30,10 @@ function HowItWorkForHost() {
     },
   ];
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16">
+    <div className="max-w-7xl mx-auto px-4">
       <SectionHeader
-        title="How It Works"
-        subTitle="Add your property, assign cleaners, and manage bookings from one place."
+        title={t('title')}
+        subTitle={t('subtitle')}
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         {featuresData.map((item, idx) => (

@@ -16,6 +16,8 @@
     "exploreTemplate": "Explorer le modèle"
   },
   "hostFeatures": {
+    "title": "Comment ça marche",
+    "subtitle": "Ajoutez votre propriété, assignez des nettoyeurs et gérez les réservations d'un seul endroit.",
     "createAccount": "Créer un compte hôte",
     "createAccountDesc": "Créez votre profil pour gérer vos propriétés et vos équipes en un seul endroit.",
     "addProperty": "Ajouter votre propriété",
@@ -24,5 +26,133 @@
     "manageListingsDesc": "Planifiez et gérez facilement les nettoyages de vos propriétés.",
     "assignCleaners": "Assigner des femmes de ménage",
     "assignCleanersDesc": "Associez des femmes de ménage à vos propriétés pour automatiser les tâches de nettoyage."
+  },
+  "cleanerHero": {
+    "title": "Trouvez des Emplois de Nettoyage de Propriété Bien Rémunérés",
+    "description": "Connectez-vous directement avec les propriétaires et les hôtes Airbnb de votre région. Parcourez les turnovers disponibles, fixez vos propres tarifs et construisez une entreprise de nettoyage fiable selon votre propre emploi du temps.",
+    "joinAsCleaner": "Rejoindre en tant que Nettoyeur",
+    "howItWorks": "Comment ça marche"
+  },
+  "cleanerBenefits": {
+    "title": "Pourquoi les Nettoyeurs Aiment Gestlio",
+    "subtitle": "Rejoignez des milliers de nettoyeurs qui ont transformé leur entreprise avec notre plateforme. Découvrez les outils qui rendent le travail de nettoyage simple et rentable.",
+    "clearSchedule": {
+      "title": "Planning quotidien clair",
+      "description": "Visualisez tous vos travaux de nettoyage organisés par date et heure. Ne manquez jamais un rendez-vous avec notre système de calendrier intuitif."
+    },
+    "noConfusion": {
+      "title": "Pas de confusion",
+      "description": "Obtenez des instructions de travail détaillées, des informations sur les propriétés et les exigences des clients, le tout en un seul endroit. Tout ce que vous devez savoir."
+    },
+    "moreJobs": {
+      "title": "Plus d'emplois",
+      "description": "Connectez-vous avec les propriétaires et les hôtes Airbnb recherchant des nettoyeurs fiables. Élargissez votre clientèle et augmentez vos revenus."
+    },
+    "easyCommunication": {
+      "title": "Communication facile",
+      "description": "Envoyez des messages aux clients directement via l'application. Posez des questions, envoyez des mises à jour et construisez des relations professionnelles."
+    },
+    "startEarning": "Commencer à Gagner Aujourd'hui"
+  },
+  "howItWorkForCleaner": {
+    "title": "Commencez le Nettoyage en 4 Étapes Simples",
+    "subtitle": "Rejoignez Gestlio et commencez à recevoir des emplois de nettoyage en minutes.",
+    "steps": {
+      "createAccount": {
+        "title": "Créer un Compte",
+        "description": "Commencez en quelques minutes, Inscrivez-vous et configurez rapidement votre profil de nettoyeur."
+      },
+      "connectWithHosts": {
+        "title": "Connectez-vous avec les Hôtes",
+        "description": "Soyez mis en relation avec des propriétaires, Connectez-vous avec des hôtes qui ont besoin de services de nettoyage."
+      },
+      "receiveTasks": {
+        "title": "Recevoir des Tâches",
+        "description": "Start getting cleaning jobs, Get notified when new tasks are assigned to you.",
+        "startGettingJobs": "Start getting cleaning jobs, Get notified when new tasks are assigned to you."
+      },
+      "completeAndGetPaid": {
+        "title": "Complete & Get Paid",
+        "description": "Finish jobs and track earnings. Complete tasks, upload proof, and receive payments quickly."
+      }
+    }
+  },
+  "downloadApp": {
+    "usedByUsers": "Utilisé par 12k+ utilisateurs",
+    "title": "Intéressé à utiliser l'Application?",
+    "description": "Téléchargez notre application et commencez à l'utiliser aujourd'hui!"
+  },
+  "testimonialsForCleaner": {
+    "testimonials": "Témoignages",
+    "title": "Approuvé par des hôtes du monde entier",
+    "subtitle": "Rejoignez des milliers d'hôtes qui font confiance à Theo pour trouver leur nettoyeur parfait",
+    "joinAsHost": "Rejoindre en tant qu'hôte"
+  },
+  "testimonialsForHost": {
+    "trustedByCleaners": "Approuvé par les Nettoyeurs",
+    "title": "Les nettoyeurs font déjà",
+    "titleHighlight": "un impact",
+    "subtitle": "Rejoignez des milliers de nettoyeurs qui font confiance à Gestlio pour trouver leur emploi parfait",
+    "fan": "Fan",
+    "testimonial1": {
+      "name": "Alex Thompson",
+      "fanType": "Football",
+      "description": "Cette plateforme a complètement transformé la façon dont je suis mes équipes préférées. Les mises à jour en temps réel et les fonctionnalités communautaires sont absolument incroyables. Je me suis connecté avec tellement d'autres fans!"
+    },
+    "testimonial2": {
+      "name": "Sarah Johnson",
+      "fanType": "Cricket",
+      "description": "En tant que passionnée de cricket, je n'ai jamais trouvé de meilleure plateforme. Les aperçus, statistiques et analyses de match sont excellents. Hautement recommandé à tous les fans de sports!"
+    },
+    "testimonial3": {
+      "name": "Michael Chen",
+      "fanType": "Basketball",
+      "description": "La couverture du basketball est phénoménale. J'adore les statistiques des joueurs et les prédictions de match. L'application mobile facilite le suivi en déplacement."
+    },
+    "testimonial4": {
+      "name": "Emma Wilson",
+      "fanType": "Tennis",
+      "description": "Enfin, une plateforme qui donne au tennis l'attention qu'il mérite! La couverture des grands chelems est incroyable, et l'analyse aide vraiment à mieux comprendre le jeu."
+    },
+    "testimonial5": {
+      "name": "David Martinez",
+      "fanType": "Football Américain",
+      "description": "La communauté football ici est incroyable. Grandes discussions, fils de match en direct, et intégration de ligue de fantasy. Rend chaque jour de match plus excitant!"
+    },
+    "testimonial6": {
+      "name": "Lisa Anderson",
+      "fanType": "Volleyball",
+      "description": "La couverture du volleyball n'a jamais été meilleure! Les profils de joueurs et les moments forts des matchs sont fantastiques. J'adore surtout la section beach volleyball."
+    },
+    "testimonial7": {
+      "name": "James Taylor",
+      "fanType": "Natation",
+      "description": "En tant que nageur compétitif, j'apprécie la couverture détaillée des événements de natation. L'analyse des techniques et les prédictions de course sont parfaites."
+    },
+    "testimonial8": {
+      "name": "Robert Brown",
+      "fanType": "Baseball",
+      "description": "Les statistiques et analyses de baseball sont inégalées. Les données historiques et les comparaisons de joueurs m'aident à comprendre le jeu à un niveau plus profond."
+    },
+    "testimonial9": {
+      "name": "Maria Garcia",
+      "fanType": "Rugby",
+      "description": "La couverture du rugby est complète et passionnée. L'analyse des tournois internationaux et les interviews de joueurs sont absolument brillantes!"
+    },
+    "testimonial10": {
+      "name": "Thomas Lee",
+      "fanType": "Golf",
+      "description": "La section golf est exceptionnelle. Les guides de parcours, les statistiques des joueurs et la couverture des tournois font de ceci un paradis pour golfeur. Je l'adore absolument!"
+    },
+    "testimonial11": {
+      "name": "Jennifer White",
+      "fanType": "Hockey",
+      "description": "La couverture du hockey est intense et détaillée. J'adore les mises à jour de match en temps réel et l'analyse post-match. Les discussions communautaires sont incroyables!"
+    },
+    "testimonial12": {
+      "name": "Christopher Moore",
+      "fanType": "Boxe",
+      "description": "L'analyse de boxe et les prédictions de combat sont incroyablement précises. Les profils de combattants et les analyses de match m'aident à mieux comprendre le sport."
+    }
   }
 }

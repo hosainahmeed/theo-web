@@ -36,7 +36,7 @@ function HostHero() {
 
         <p className="text-xs text-gray-50">{t('getApp')}</p>
         {showAppQRcode && <div className="absolute top-[calc(100%+8px)] left-0 w-32 h-32 bg-white rounded-lg border border-white/20">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" alt="QR Code" className="w-full object-contain h-full" />
+          <Image width={128} height={128} src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" alt="QR Code" className="w-full object-contain h-full" />
         </div>}
       </div>
 

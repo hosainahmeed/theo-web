@@ -1,38 +1,44 @@
 "use client"
 
+import { IMAGE } from "@/constant/image.index"
+import Image from "next/image"
+import { useTranslations } from 'next-intl'
+
 function DownloadAppSection() {
+  const t = useTranslations('downloadApp');
+
   return (
     <div
-      className="max-w-7xl py-16 md:pl-24 border border-border md:w-full mx-2 md:mx-auto flex flex-col items-start justify-center text-left bg-linear-to-b from-[#0088FF] to-[#180047] rounded-2xl p-10 text-white">
+      className="container py-16 md:pl-24 border border-border md:w-full md:mx-auto flex flex-col items-start justify-center text-left bg-linear-to-b from-[#0088FF] to-[#180047] rounded-2xl p-10 text-white">
       <div className="flex items-center">
         <div className="flex -space-x-3 pr-3">
-          <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200" alt="image"
+          <Image width={32} height={32} src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200" alt="image"
             className="size-8 rounded-full hover:-translate-y-px transition z-1" />
-          <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200" alt="image"
-            className="size-8 rounded-full hover:-translate-y-px transition z-[2]" />
-          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop"
+          <Image width={32} height={32} src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200" alt="image"
+            className="size-8 rounded-full hover:-translate-y-px transition z-2" />
+          <Image width={32} height={32} src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop"
             alt="image"
-            className="size-8 rounded-full hover:-translate-y-px transition z-[3]" />
+            className="size-8 rounded-full hover:-translate-y-px transition z-3" />
         </div>
         <div>
           <div className="flex items-center gap-px">
             {Array.from({ length: 4 }).map((_, i) => (
               <StartIcon key={i} />
             ))}
-
           </div>
-          <p className="text-sm text-gray-300">Used by 12k+ developers</p>
+          <p className="text-sm text-gray-300">{t('usedByUsers')}</p>
         </div>
       </div>
       <h1 className="text-4xl md:text-[46px] md:leading-15 font-semibold mt-5 bg-linear-to-r from-white to-[#CAABFF] text-transparent bg-clip-text">
-        Ready to try-out this app?
+        {t('title')}
       </h1>
       <p className="bg-linear-to-r from-white to-[#CAABFF] text-transparent bg-clip-text text-lg">
-        Your next favourite tool is just one click away.
+        {t('description')}
       </p>
-      <button className="px-12 py-2.5 text-white border border-purple-600 bg-purple-700/60 hover:bg-purple-800 transition-all rounded-full text-sm mt-4">
-        Get Started
-      </button>
+      <div className="space-x-2 flex items-center mt-4">
+        <Image src={IMAGE.googlePlayBadge} width={120} height={40} alt="Google Play Badge" />
+        <Image src={IMAGE.appStoreBadge} width={120} height={40} alt="App Store Badge" />
+      </div>
     </div>
   )
 }

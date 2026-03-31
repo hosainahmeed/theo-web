@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import { useState } from 'react';
 
@@ -24,8 +25,8 @@ const Faq = () => {
   ];
   return (
     <>
-      <div className="max-w-6xl mx-auto flex flex-col items-center justify-center px-4 md:px-0">
-        <p className="text-indigo-600 text-sm font-medium">FAQ's</p>
+      <div className="max-w-6xl py-16 mx-auto flex flex-col items-center justify-center px-4 md:px-0">
+        <p className="text-indigo-600 text-sm font-medium">FAQ&apos;s</p>
         <h1 className="text-3xl font-semibold text-center">Looking for answer?</h1>
         <p className="text-sm text-slate-500 mt-2 pb-8 text-center">
           Ship Beautiful Frontends Without the Overhead — Customizable, Scalable and Developer-Friendly UI Components.
