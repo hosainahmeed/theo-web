@@ -23,7 +23,7 @@ function HostHero() {
   }
 
   return (
-    <section className="relative flex flex-col items-center max-md:px-2 bg-linear-to-b from-[#0088FF] to-white pb-20 pt-5">
+    <section className="relative flex flex-col items-center max-md:px-2 bg-linear-to-b from-[#0088FF] to-transparent pb-20 pt-5">
       <div
         onMouseEnter={() => {
           setShowAppQRcode(true)

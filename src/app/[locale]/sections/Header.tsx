@@ -12,8 +12,8 @@ function Header() {
 
   const linkItems = [
     // { name: t('home'), href: '/' },
-    { name: t('forHosts'), href: '/' },
-    { name: t('forCleaners'), href: '/for-cleaners' },
+    { name: t('forCleaners'), href: '/' },
+    { name: t('forHosts'), href: '/for-hosts' },
     { name: t('aboutUs'), href: '/about' },
     { name: t('contactUs'), href: '/contact' },
   ]
