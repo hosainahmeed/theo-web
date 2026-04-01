@@ -2,8 +2,8 @@ import { routing } from '@/i18n';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import Header from './sections/Header';
 import Footer from './sections/Footer';
+import Header from './sections/Header';
 
 export default async function LocaleLayout({
   children,

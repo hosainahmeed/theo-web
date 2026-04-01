@@ -11,10 +11,13 @@ import cleanerImage from '@/assets/for-cleaner.png';
 import googlePlayBadge from '@/assets/google-play-badge.svg';
 import hostPreview from '@/assets/host-preview.png';
 import houseImage from '@/assets/house.svg';
-import login_step from '@/assets/login-step.png';
-import paymentGif from '@/assets/payment.gif';
-import receivingTaskImage from '@/assets/reciveing-task.png';
 import testimonialsImage from '@/assets/images-for-tesimonials.png';
+import login_step from '@/assets/login-step.png';
+import mapImage from '@/assets/map.png';
+import paymentGif from '@/assets/payment.gif';
+import projectCardShimmer from '@/assets/project-card-shimmer.png';
+import receivingTaskImage from '@/assets/reciveing-task.png';
+import schedule from "@/assets/schedule.png";
 
 export const IMAGE = {
   apartment: apartmentImage,
@@ -33,5 +36,8 @@ export const IMAGE = {
   receivingTask: receivingTaskImage,
   login_step,
   payment: paymentGif,
-  testimonials: testimonialsImage
+  testimonials: testimonialsImage,
+  map: mapImage,
+  projectCardShimmer: projectCardShimmer,
+  schedule
 } as const;

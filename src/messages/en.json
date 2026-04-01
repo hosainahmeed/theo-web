@@ -13,7 +13,9 @@
     "titleHighlight": "AIRMANAGE",
     "description": "Discover the power of housekeeping with AIRMANAGE. Streamline, manage, and monitor housekeeping operations with ease.",
     "getStarted": "Get started",
-    "exploreTemplate": "Explore template"
+    "beHost": "Be Host",
+    "findCleaners": "Find Cleaners",
+    "listProperty": "List Property"
   },
   "hostFeatures": {
     "title": "How It Works",
