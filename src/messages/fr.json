@@ -13,7 +13,9 @@
     "titleHighlight": "AIRMANAGE",
     "description": "Découvrez la puissance du ménage avec AIRMANAGE. Rationalisez, gérez et surveillez les opérations de ménage en toute simplicité.",
     "getStarted": "Commencer",
-    "exploreTemplate": "Explorer le modèle"
+    "beHost": "Devenir un hôte",
+    "findCleaners": "Trouver des nettoyeurs",
+    "listProperty": "Lister une propriété"
   },
   "hostFeatures": {
     "title": "Comment ça marche",

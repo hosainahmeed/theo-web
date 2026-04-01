@@ -23,7 +23,7 @@ function HostHero() {
   }
 
   return (
-    <section className="relative flex flex-col items-center max-md:px-2 bg-linear-to-b from-[#0088FF] to-transparent pb-20 pt-5">
+    <section className="relative overflow-hidden flex flex-col items-center max-md:px-2 bg-linear-to-b from-[#0088FF] to-transparent  pt-5">
       <div
         onMouseEnter={() => {
           setShowAppQRcode(true)
@@ -47,16 +47,16 @@ function HostHero() {
         {t('description')}
       </p>
 
-      <div className="flex items-center gap-4 mt-8 text-sm">
+      <div className="flex items-center md:flex-row flex-col gap-4 mt-8 text-sm">
         <AnimatedButton
-          buttonText={t('getStarted')}
+          buttonText={t('findCleaners')}
           onClick={handleGetStarted}
           className="text-sm"
         />
 
         <div className='p-[0.5px] rounded-full bg-linear-to-r from-white to-white/60'>
           <AnimatedButton
-            buttonText={t('exploreTemplate')}
+            buttonText={t('listProperty')}
             onClick={handleExploreTemplate}
             variant="secondary"
             className="text-sm"
@@ -67,8 +67,8 @@ function HostHero() {
       <div className="flex flex-row items-center justify-center gap-10 md:gap-20 mx-auto my-4 px-4 flex-wrap">
         <BrandShowcase />
       </div>
-      <div className="relative h-150 md:h-146.5 overflow-hidden border-b-transparent border-b-0 rounded-bl-none rounded-br-none rounded-3xl">
-        <div className="absolute bottom-0 w-full h-2/4 md:h-1/4 bg-linear-to-t to-transparent via-white/70 from-white left-0"></div>
+      <div className="relative sm:h-150 overflow-hidden border-b-transparent border-b-0 rounded-bl-none rounded-br-none rounded-3xl">
+        <div className="absolute  bottom-0 w-full h-2/4 md:h-1/4 bg-linear-to-t to-transparent via-white/70 from-white left-0"></div>
         <Image
           placeholder="blur"
           className="h-full rounded-3xl object-contain md:object-cover object-top"
