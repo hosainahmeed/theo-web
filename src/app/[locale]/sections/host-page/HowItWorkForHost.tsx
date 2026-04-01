@@ -1,47 +1,81 @@
+import SectionHeader from '@/components/reusable-ui/SectionHeader'
+import { IMAGE } from '@/constant/image.index'
+import { cn } from '@/lib/utils'
+import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 
-import FeaturesCard from '@/components/reusable-ui/FeatureCard';
-import SectionHeader from '@/components/reusable-ui/SectionHeader';
-import { IMAGE } from '@/constant/image.index';
-import { useTranslations } from 'next-intl';
+interface CardProps {
+  t: (key: string) => string
+}
 
-function HowItWorkForHost() {
+const cardStyle = "p-8 border border-border rounded-2xl h-full"
+
+const Card1 = ({ t }: CardProps) => (
+  <div className={cn(cardStyle, "space-y-4")}>
+    <Image src={IMAGE.feature1} width={200} height={200} alt='schedule-icon' />
+    <h1 className="text-lg text-zinc-900 font-semibold mb-2">{t('createAccount')}</h1>
+    <p className="text-sm text-zinc-600 leading-relaxed">{t('createAccountDesc')}</p>
+  </div>
+)
+const Card2 = ({ t }: CardProps) => (
+  <div className={cn(cardStyle)}>
+    <Image src={IMAGE.feature2} width={200} height={200} alt='schedule-icon' />
+    <h1 className="text-lg text-zinc-900 font-semibold mb-2">{t('addProperty')}</h1>
+    <p className="text-sm text-zinc-600 leading-relaxed">{t('addPropertyDesc')}</p>
+  </div>
+)
+const Card3 = ({ t }: CardProps) => (
+  <div className={cn(cardStyle, "space-y-2")}>
+    <Image src={IMAGE.feature3} width={200} height={200} alt='schedule-icon' />
+    <h1 className="text-lg text-zinc-900 font-semibold mb-2">{t('manageListings')}</h1>
+    <p className="text-sm text-zinc-600 leading-relaxed">{t('manageListingsDesc')}</p>
+  </div>
+)
+const Card4 = ({ t }: CardProps) => (
+  <div className={cn(cardStyle)}>
+    <Image src={IMAGE.feature4} width={200} height={200} alt='schedule-icon' />
+    <h1 className="text-lg text-zinc-900 font-semibold mb-2">{t('assignCleaners')}</h1>
+    <p className="text-sm text-zinc-600 leading-relaxed">{t('assignCleanersDesc')}</p>
+  </div>
+)
+
+
+function CleanerBenefits() {
   const t = useTranslations('hostFeatures');
 
-  const featuresData = [
-    {
-      image: IMAGE.feature1,
-      title: t('createAccount'),
-      description: t('createAccountDesc'),
-    },
-    {
-      image: IMAGE.feature2,
-      title: t('addProperty'),
-      description: t('addPropertyDesc'),
-    },
-    {
-      image: IMAGE.feature3,
-      title: t('manageListings'),
-      description: t('manageListingsDesc'),
-    },
-    {
-      image: IMAGE.feature4,
-      title: t('assignCleaners'),
-      description: t('assignCleanersDesc'),
-    },
-  ];
   return (
-    <div className="max-w-7xl mx-auto px-4">
-      <SectionHeader
-        title={t('title')}
-        subTitle={t('subtitle')}
-      />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-        {featuresData.map((item, idx) => (
-          <FeaturesCard key={idx} index={idx} {...item} />
-        ))}
+    <div className='max-w-7xl px-2 mx-auto h-fit flex flex-col justify-center'>
+      <div>
+        <SectionHeader
+          title={t('title')}
+          subTitle={t('subtitle')}
+        />
+
+        <div
+          className="grid gap-3
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-3"
+        >
+          <div className="col-span-3 sm:col-span-2 lg:col-span-2">
+            <Card1 t={t} />
+          </div>
+
+          <div className="col-span-3 sm:col-span-1">
+            <Card2 t={t} />
+          </div>
+
+          <div className="col-span-3 sm:col-span-3 lg:col-span-1">
+            <Card3 t={t} />
+          </div>
+
+          <div className="col-span-3 sm:col-span-2 lg:col-span-2">
+            <Card4 t={t} />
+          </div>
+        </div>
       </div>
     </div>
   )
 }
 
-export default HowItWorkForHost;
+export default CleanerBenefits
