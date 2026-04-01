@@ -1,7 +1,9 @@
 import SectionHeader from '@/components/reusable-ui/SectionHeader'
 import AnimatedButton from '@/components/ui/animated-button'
+import { IMAGE } from '@/constant/image.index'
 import { cn } from '@/lib/utils'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 
 interface CardProps {
   t: (key: string) => string
@@ -10,7 +12,8 @@ interface CardProps {
 const cardStyle = "p-8 border border-border rounded-2xl h-full"
 
 const Card1 = ({ t }: CardProps) => (
-  <div className={cardStyle}>
+  <div className={cn(cardStyle, "space-y-4")}>
+    <Image src={IMAGE.schedule} width={400} height={100} alt='schedule-icon' />
     <h1 className="text-lg text-zinc-900 font-semibold mb-2">{t('clearSchedule.title')}</h1>
     <p className="text-sm text-zinc-600 leading-relaxed">{t('clearSchedule.description')}</p>
   </div>
@@ -22,13 +25,15 @@ const Card2 = ({ t }: CardProps) => (
   </div>
 )
 const Card3 = ({ t }: CardProps) => (
-  <div className={cn(cardStyle)}>
+  <div className={cn(cardStyle, "space-y-2")}>
+    <Image src={IMAGE.projectCardShimmer} width={200} height={200} alt='schedule-icon' />
     <h1 className="text-lg text-zinc-900 font-semibold mb-2">{t('moreJobs.title')}</h1>
     <p className="text-sm text-zinc-600 leading-relaxed">{t('moreJobs.description')}</p>
   </div>
 )
 const Card4 = ({ t }: CardProps) => (
   <div className={cn(cardStyle)}>
+    <Image src={IMAGE.map} width={200} height={200} alt='schedule-icon' />
     <h1 className="text-lg text-zinc-900 font-semibold mb-2">{t('easyCommunication.title')}</h1>
     <p className="text-sm text-zinc-600 leading-relaxed">{t('easyCommunication.description')}</p>
   </div>
