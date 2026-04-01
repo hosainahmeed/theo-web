@@ -7,20 +7,20 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: "How to use this component?",
-      answer: "To use this component, you need to import it in your project and use it in your JSX code. Here's an example of how to use it:",
+      question: "How to become a cleaner in Theo?",
+      answer: "You can become a cleaner by signing up on our website and completing the application process. Once your application is approved, you will be able to start serving as a cleaner.",
     },
     {
-      question: "Are there any other components available?",
-      answer: "Yes, there are many other components available in this library. You can find them in the 'Components' section of the website.",
+      question: "Is there a fee to become a cleaner?",
+      answer: "There is no fee to become a cleaner in Theo. However, you will need to pay a small fee for background checks and other associated costs.",
     },
     {
-      question: "Are components responsive?",
-      answer: "Yes, all components are responsive and can be used on different screen sizes.",
+      question: "How do I apply to become a cleaner?",
+      answer: "To apply to become a cleaner, you will need to register on our website and complete the application process. Once your application is submitted, one of our staff members will review it and let you know if it has been approved.",
     },
     {
-      question: "Can I customize the components?",
-      answer: "Yes, you can customize the components by passing props to them. You can find more information about customizing components in the 'Customization' section of the website.",
+      question: "Can I customize the cleaner profile?",
+      answer: "Yes, you can customize your cleaner profile on our website. You can update your profile picture, add a bio, and specify your cleaning services and experience.",
     },
   ];
   return (
@@ -29,7 +29,7 @@ const Faq = () => {
         <p className="text-indigo-600 text-sm font-medium">FAQ&apos;s</p>
         <h1 className="text-3xl font-semibold text-center">Looking for answer?</h1>
         <p className="text-sm text-slate-500 mt-2 pb-8 text-center">
-          Ship Beautiful Frontends Without the Overhead — Customizable, Scalable and Developer-Friendly UI Components.
+          Find answers to common questions about our services, pricing, and more.
         </p>
         {faqs.map((faq, index: any) => (
           <div className="border-b border-slate-200 py-4 cursor-pointer w-full" key={index} onClick={() => setOpenIndex(openIndex === index ? null : index)}>
